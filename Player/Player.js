@@ -7,7 +7,7 @@ import {
   Costume,
   Color,
   Sound,
-} from "https://unpkg.com/leopard@^1/dist/index.esm.js";
+} from "../cd.js";
 import isKeyDown from "../keyboard.js";
 import State from "../state.js";
 
@@ -16,35 +16,35 @@ export default class Player extends Sprite {
     super(...args);
 
     this.costumes = [
-      new Costume("run-01", "./Player/costumes/run-01.svg", {
+      new Costume("run-01", "./Player/costumes/tile024.png", {
         x: 34.838462762860075,
         y: 60.39999999999999,
       }),
-      new Costume("run-02", "./Player/costumes/run-02.svg", {
+      new Costume("run-02", "./Player/costumes/tile025.png", {
         x: 34.95855939065541,
         y: 59.8,
       }),
-      new Costume("run-03", "./Player/costumes/run-03.svg", {
+      new Costume("run-03", "./Player/costumes/tile026.png", {
         x: 34.68023764314236,
         y: 58.499999999999986,
       }),
-      new Costume("run-04", "./Player/costumes/run-04.svg", {
+      new Costume("run-04", "./Player/costumes/tile027.png", {
         x: 35.80426822129397,
         y: 58.09999999999998,
       }),
-      new Costume("run-05", "./Player/costumes/run-05.svg", {
+      new Costume("run-05", "./Player/costumes/tile028.png", {
         x: 36.16960170432537,
         y: 56.89999999999999,
       }),
-      new Costume("run-06", "./Player/costumes/run-06.svg", {
+      new Costume("run-06", "./Player/costumes/tile029.png", {
         x: 36.3744179241063,
         y: 57.39999999999999,
       }),
-      new Costume("run-07", "./Player/costumes/run-07.svg", {
+      new Costume("run-07", "./Player/costumes/tile030.png", {
         x: 36.12853442979474,
         y: 58.39999999999999,
       }),
-      new Costume("run-08", "./Player/costumes/run-08.svg", {
+      new Costume("run-08", "./Player/costumes/tile031", {
         x: 35.215224449751986,
         y: 59.39999999999999,
       }),
@@ -80,11 +80,11 @@ export default class Player extends Sprite {
         x: 35.215224449751986,
         y: 59.39999999999999,
       }),
-      new Costume("Jump01", "./Player/costumes/Jump01.svg", {
+      new Costume("Jump01", "./Player/costumes/tile010.png", {
         x: 42.18599999999998,
         y: 61.210170000000005,
       }),
-      new Costume("run_j2", "./Player/costumes/run_j2.svg", {
+      new Costume("run_j2", "./Player/costumes/tile007.png", {
         x: 35.03539821959376,
         y: 58.7,
       }),
@@ -125,9 +125,9 @@ export default class Player extends Sprite {
         x: 21.096205000000026,
         y: -24.136570000000006,
       }),
-      new Costume("stand", "./Player/costumes/stand.svg", {
-        x: 41.99899999999997,
-        y: 58.000000000000014,
+      new Costume("Player-Blue-Stand", "./Player/costumes/Player-Blue-Stand.png", {
+        x: 40,
+        y: 50,
       }),
       new Costume("stand2", "./Player/costumes/stand2.svg", {
         x: 41.998999999999995,
@@ -149,34 +149,7 @@ export default class Player extends Sprite {
         x: 18.65632926288879,
         y: 18.656329262888676,
       }),
-      new Costume("Walk1", "./Player/costumes/Walk1.png", { x: 40, y: 60 }),
-      new Costume("Walk2", "./Player/costumes/Walk2.png", { x: 38, y: 60 }),
-      new Costume("Walk3", "./Player/costumes/Walk3.png", { x: 36, y: 60 }),
-      new Costume("Walk4", "./Player/costumes/Walk4.png", { x: 34, y: 60 }),
-      new Costume("Walk5", "./Player/costumes/Walk5.png", { x: 32, y: 60 }),
-      new Costume("Walk6", "./Player/costumes/Walk6.png", { x: 32, y: 60 }),
-      new Costume("Walk7", "./Player/costumes/Walk7.png", { x: 32, y: 60 }),
-      new Costume("Walk8", "./Player/costumes/Walk8.png", { x: 32, y: 62 }),
-      new Costume("Walk9", "./Player/costumes/Walk9.png", { x: 34, y: 62 }),
-      new Costume("Walk10", "./Player/costumes/Walk10.png", { x: 28, y: 62 }),
-      new Costume("Walk11", "./Player/costumes/Walk11.png", { x: 22, y: 62 }),
-      new Costume("Walk12", "./Player/costumes/Walk12.png", { x: 22, y: 62 }),
-      new Costume("Walk13", "./Player/costumes/Walk13.png", { x: 26, y: 62 }),
-      new Costume("Walk14", "./Player/costumes/Walk14.png", { x: 28, y: 60 }),
-      new Costume("Walk15", "./Player/costumes/Walk15.png", { x: 32, y: 60 }),
-      new Costume("Walk16", "./Player/costumes/Walk16.png", { x: 32, y: 60 }),
-      new Costume("Walk17", "./Player/costumes/Walk17.png", { x: 32, y: 60 }),
-      new Costume("Walk18", "./Player/costumes/Walk18.png", { x: 32, y: 60 }),
-      new Costume("Walk19", "./Player/costumes/Walk19.png", { x: 32, y: 60 }),
-      new Costume("Walk20", "./Player/costumes/Walk20.png", { x: 30, y: 60 }),
-      new Costume("Walk21", "./Player/costumes/Walk21.png", { x: 28, y: 60 }),
-      new Costume("Walk22", "./Player/costumes/Walk22.png", { x: 24, y: 60 }),
-      new Costume("Walk23", "./Player/costumes/Walk23.png", { x: 22, y: 62 }),
-      new Costume("Walk24", "./Player/costumes/Walk24.png", { x: 22, y: 62 }),
-      new Costume("Walk25", "./Player/costumes/Walk25.png", { x: 26, y: 62 }),
-      new Costume("Walk26", "./Player/costumes/Walk26.png", { x: 30, y: 62 }),
-      new Costume("Walk27", "./Player/costumes/Walk27.png", { x: 34, y: 60 }),
-      new Costume("Walk28", "./Player/costumes/Walk28.png", { x: 38, y: 60 }),
+      
     ];
 
     this.sounds = [new Sound("pop", "./Player/sounds/pop.wav")];
@@ -241,11 +214,13 @@ export default class Player extends Sprite {
   }
 
   *checkTouchingSolid() {
+    this.size = 5
     if (this.touching(this.sprites["Level"].andClones())) {
       this.vars.touching = 1;
     } else {
       this.vars.touching = 0;
     }
+    this.size = 250
   }
 
   *whenIReceiveTickPlayer() {
@@ -417,6 +392,7 @@ export default class Player extends Sprite {
     this.vars.temp = this.direction;
     this.vars.distance = 1;
     this.direction = this.toNumber(dir);
+    
     for (let i = 0; i < 128; i++) {
       this.warp(this.checkTouchingSolid)();
       if (this.compare(this.vars.touching, 1) < 0) {
@@ -430,14 +406,16 @@ export default class Player extends Sprite {
   }
 
   *whenIReceiveTickFirst() {
+    
     this.costume = "hitbox v2";
     this.rotationStyle = Sprite.RotationStyle.DONT_ROTATE;
   }
 
   *setCostume() {
+    this.size = 250
     this.rotationStyle = Sprite.RotationStyle.LEFT_RIGHT;
     if (this.compare(this.vars.wallSlide, 0) > 0) {
-      this.costume = "run-11";
+      this.costume = "run-04";
       return;
     }
     if (this.compare(this.vars.falling, 1) > 0) {
@@ -449,7 +427,7 @@ export default class Player extends Sprite {
       return;
     }
     if (this.compare(this.vars.frame, 0) > 0) {
-      this.costume = 1 + Math.floor(this.toNumber(this.vars.frame) % 16);
+      this.costume = 1 + Math.floor(this.toNumber(this.vars.frame) % 7);
     } else {
       this.costume = "hit angle 0";
       for (let i = 0; i < 5; i++) {
@@ -458,7 +436,7 @@ export default class Player extends Sprite {
           this.costume = 20 + (this.costumeNumber + 5);
         }
       }
-      this.costume = "stand";
+      this.costume = "Player-Blue-Stand";
     }
   }
 

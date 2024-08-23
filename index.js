@@ -1,7 +1,7 @@
 import {
   Project,
   Sprite,
-} from "https://unpkg.com/leopard@^1/dist/index.esm.js";
+} from "../cd.js";
 
 import Stage from "./Stage/Stage.js";
 import GuiMenu from "./GuiMenu/GuiMenu.js";

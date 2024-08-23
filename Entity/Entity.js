@@ -7,7 +7,7 @@ import {
   Costume,
   Color,
   Sound,
-} from "https://unpkg.com/leopard@^1/dist/index.esm.js";
+} from "../cd.js";
 
 export default class Entitty extends Sprite {
   constructor(...args) {
