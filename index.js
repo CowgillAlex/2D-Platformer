@@ -14,7 +14,7 @@ import Level from "./Level/Level.js";
 import Player from "./Player/Player.js";
 import Music from "./Music/Music.js";
 import Placeholders from "./Placeholders/Placeholders.js";
-import Entitty from "./Entitty/Entitty.js";
+import Entitty from "./Entity/Entity.js";
 import PlayerHand from "./PlayerHand/PlayerHand.js";
 
 const stage = new Stage({ costumeNumber: 1 });
